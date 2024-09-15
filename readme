@@ -2,12 +2,12 @@ Important Notes:
 1. Must use Python version 3
 
 
-To boot up the system:
+To Boot Up The System:
 1. open new terminal
-2. run ''python3 -m pip install -r ./requirements.txt -U''
-2. run ''python3 external_api_service.py''
+2. run '' python3 -m pip install -r ./requirements.txt -U ''
+2. run '' python3 external_api_service.py ''
 4. open new terminal
-5. run ''python3 order_worker.py''
+5. run '' python3 order_worker.py ''
 
 
 Use Case Example:
@@ -35,7 +35,12 @@ with request json body
 }
 
 2. Order Worker logs
-<img width="600" height="300" src="./sc1.png">
++ Order worker is up & running
++ Order with id ''6'' contains the following items:
+-- Sample Part 2 (Material: Material 3 , Quantity: 2)
+-- Sample Part 1 (Material: Material 1 , Quantity: 4)
+-- Sample Part 3 (Material: Material 2 , Quantity: 8)
++ Order with id ''6'' marked as shipped
 
 
 Possible Improvements:
