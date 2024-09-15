@@ -1,0 +1,56 @@
+Important Notes:
+1. Must use Python version 3
+
+
+To boot up the system:
+1. open new terminal
+2. run ''python3 -m pip install -r ./requirements.txt -U''
+2. run ''python3 external_api_service.py''
+4. open new terminal
+5. run ''python3 order_worker.py''
+
+
+Use Case Example:
+1. send POST request to '' http://localhost:3000/order ''
+with request json body
+{
+    "customer_name": "Steve",
+    "items":[
+        {
+            "sample_part_id": 2,
+            "material_id": 3,
+            "quantity": 2
+        },
+        {
+            "sample_part_id": 1,
+            "material_id": 1,
+            "quantity": 4
+        },
+        {
+            "sample_part_id": 3,
+            "material_id": 2,
+            "quantity": 8
+        }
+    ]
+}
+
+2. Order Worker logs
+<img width="600" height="300" src="./sc1.png">
+
+
+Possible Improvements:
+1. Consider using an ORM like SQLAlchemy
+2. Establish database constraints to enforce business rules
+3. Add docstrings (class and method descriptions)
+4. Write comprehensive unit tests plus coving and linting the code
+5. Improve error messages, especially verification errors messages
+6. Use custom exceptions for better error handling and data flow control
+7. Implement logging to track application behavior
+8. Implement robust user authentication mechanisms to control access
+9. Use Swagger to document the API endpoints
+
+
+Possible Improvements For Database Design for Heavy Load:
+1. Creating database indexes on frequently queried columns  (For heavy read workloads)
+2. Consider database replications   (For heavy read workloads)
+3. Consider Geo or Hash Sharding (For heavy write workloads)
